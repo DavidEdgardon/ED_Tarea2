@@ -2,6 +2,7 @@
 // Created by ASUS on 10/23/2018.
 //
 
+
 #include "ColaSubway.h"
 
 ColaSubway::ColaSubway():
@@ -25,15 +26,9 @@ void ColaSubway::agregar(string nombre) {
     }
 
 void ColaSubway::imprimir() {
-    subways *tmp = primero;
-
-    while (tmp != 0) {
-        std::cout <<"SUBWAYS**: "<< tmp->n <<" ";
-        tmp = tmp->ant;
-    }
-    std::cout<<std::endl;
+    subways * tmp=primero;
+    cout<<tmp->n;
 }
-
 bool ColaSubway::eliminar() {
     subways * actual= primero;
     if(!esVacia()){
